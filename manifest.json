@@ -1,0 +1,22 @@
+{
+    "name": "Manhattan Project",
+    "version": "1.0",
+    "description": "Two wasn't nearly enough",
+    "icons": {
+        "48": "images/1f4a3.png",
+        "128": "images/1f4a3.png",
+        "512": "images/1f4a3.png"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": ["declarativeContent", "activeTab"],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "512": "images/1f4a3.png"
+        }
+    },
+    "manifest_version": 2
+}
