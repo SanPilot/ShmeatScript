@@ -11,7 +11,7 @@ let newArr = {};
 shmeatButton.onclick = function()
 {
     chrome.tabs.executeScript({
-        code: 'var ansArray = ' + JSON.stringify(newArr) + ';var easyDelay = ' + easyDelay.value + ';var medDelay = ' + medDelay.value + ';var diffDelay = ' + diffDelay.value + ';'
+        code: 'var ansArray = ' + JSON.stringify(newArr) + ';var easyDelay = ' + easyDelay.value + ';var medDelay = ' + medDelay.value + ';var diffDelay = ' + diffDelay.value + ';var accuracy = ' + acc_input.value + ';'
     }, function()
     {
         chrome.tabs.executeScript({
@@ -37,17 +37,23 @@ jsonPicker.addEventListener('change', (event) =>
 
 easyDelay.addEventListener('change', (event) =>
 {
-
+    chrome.tabs.executeScript({
+        code: 'var easyDelay = ' + easyDelay.value + ';console.log("Easy question delay changed to " + ' + easyDelay.value + ');'
+    });
 });
 
 medDelay.addEventListener('change', (event) =>
 {
-
+    chrome.tabs.executeScript({
+        code: 'var easyDelay = ' + medDelay.value + ';console.log("Easy question delay changed to " + ' + medDelay.value + ');'
+    });
 });
 
 diffDelay.addEventListener('change', (event) =>
 {
-
+    chrome.tabs.executeScript({
+        code: 'var easyDelay = ' + diffDelay.value + ';console.log("Easy question delay changed to " + ' + diffDelay.value + ');'
+    });
 });
 
 function receivedText(e)
