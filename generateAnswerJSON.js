@@ -8,7 +8,7 @@ function startChain()
     qList[q].click();
 
     setTimeout(() => {
-        if (q != qList.length - 1)
+        if (q != qList.length)
             getAnswer(q);
         else
             createCSV();
